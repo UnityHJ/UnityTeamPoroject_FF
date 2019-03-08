@@ -6,14 +6,16 @@ public class GameManager : MonoBehaviour
 {
     [Header("Bread Create Info")]
     public Transform[] points;
-    public GameObject[] bread;
+    public GameObject[] chicks;
     public float createTime = 1.0f;
-    public int maxBread = 20;
+    public int maxBread = 8;
     public bool isGameOver = false;
     public static GameManager instance = null;
     public List<GameObject> breadPool = new List<GameObject>();
 
     public int randomIdx;
+
+
 
 
 
@@ -33,6 +35,10 @@ public class GameManager : MonoBehaviour
             StartCoroutine(CreateBread());
         }
 
+
+        
+
+
     }
 
     private IEnumerator CreateBread()
@@ -40,24 +46,28 @@ public class GameManager : MonoBehaviour
         while (!isGameOver)
         {
             int breadCount = GameObject.FindGameObjectsWithTag("Bread").Length;
-            if (breadCount < maxBread)
+            if (breadCount <= maxBread)
             {
                 yield return new WaitForSeconds(createTime);
                 if (isGameOver) break;
-                int idx = Random.Range(1, points.Length);
-                randomIdx = Random.Range(0, bread.Length);
-                Instantiate(bread[randomIdx], points[idx].position, points[idx].rotation);
-                for (int i = 0; i < breadPool.Count; i++)
-                {
-                    if (breadPool[i].activeSelf == false)
-                    {
-                        breadPool[i].tag = "Bread";
-                        breadPool[i].transform.position = points[idx].position;
-                        breadPool[i].transform.rotation = points[idx].rotation;
-                        breadPool[i].SetActive(true);
-                        break;
-                    }
-                }
+                int idx = Random.Range(2, points.Length);
+                randomIdx = Random.Range(0, chicks.Length);
+                
+                Instantiate(chicks[randomIdx], points[idx].position, points[idx].rotation);
+
+
+
+                //for (int i = 0; i < breadPool.Count; i++)
+                //{
+                //    if (breadPool[i].activeSelf == false)
+                //    {
+                //        breadPool[i].tag = "Chicks";
+                //        breadPool[i].transform.position = points[idx].position;
+                //        breadPool[i].transform.rotation = points[idx].rotation;
+                //        breadPool[i].SetActive(true);
+                //        break;
+                //    }
+                //}
             }
             else yield return null;
         }
