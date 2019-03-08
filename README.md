@@ -1,2 +1,0 @@
-# UnityTeamPoroject_FF
-VR_Food_Fighter
