@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [Header("Bread Create Info")]
+
+    public static GameManager Instance { get; set; }
+
+    [Header("Chicks Create Info")]
     public Transform[] points;
     public GameObject[] chicks;
     public float createTime = 1.0f;
-    public int maxBread = 8;
+    public int maxChicks;
     public bool isGameOver = false;
     public static GameManager instance = null;
-    public List<GameObject> breadPool = new List<GameObject>();
+    //public List<GameObject> ChicksPool = new List<GameObject>();
 
     public int randomIdx;
 
@@ -32,7 +35,7 @@ public class GameManager : MonoBehaviour
         points = GameObject.Find("SpawnPointGroup").GetComponentsInChildren<Transform>();
         if (points.Length > 0)
         {
-            StartCoroutine(CreateBread());
+            StartCoroutine(CreateChicks());
         }
 
 
@@ -41,12 +44,12 @@ public class GameManager : MonoBehaviour
 
     }
 
-    private IEnumerator CreateBread()
+    private IEnumerator CreateChicks()
     {
         while (!isGameOver)
         {
-            int breadCount = GameObject.FindGameObjectsWithTag("Bread").Length;
-            if (breadCount <= maxBread)
+            int chickCount = GameObject.FindGameObjectsWithTag("Chicks").Length;
+            if (chickCount <= maxChicks)
             {
                 yield return new WaitForSeconds(createTime);
                 if (isGameOver) break;
@@ -72,4 +75,6 @@ public class GameManager : MonoBehaviour
             else yield return null;
         }
     }
+
+   
 }
