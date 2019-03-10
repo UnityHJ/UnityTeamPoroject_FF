@@ -17,10 +17,7 @@ public class GameManager : MonoBehaviour
     //public List<GameObject> ChicksPool = new List<GameObject>();
 
     public int randomIdx;
-
-
-
-
+          
 
     private void Awake()
     {
@@ -37,19 +34,14 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(CreateChicks());
         }
-
-
-        
-
-
     }
 
     private IEnumerator CreateChicks()
     {
         while (!isGameOver)
         {
-            int chickCount = GameObject.FindGameObjectsWithTag("Chicks").Length;
-            if (chickCount <= maxChicks)
+            int chickCount = GameObject.FindGameObjectsWithTag("Chicken").Length;
+            if (chickCount < maxChicks)
             {
                 yield return new WaitForSeconds(createTime);
                 if (isGameOver) break;
@@ -74,7 +66,5 @@ public class GameManager : MonoBehaviour
             }
             else yield return null;
         }
-    }
-
-   
+    }   
 }

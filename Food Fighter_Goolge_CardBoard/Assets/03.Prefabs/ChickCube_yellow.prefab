@@ -13,12 +13,11 @@ GameObject:
   - component: {fileID: 6463073284881942648}
   - component: {fileID: 6525421369214286240}
   - component: {fileID: 2913567617379748275}
-  - component: {fileID: 3690148659933454452}
   - component: {fileID: 8629157661636464227}
   - component: {fileID: 520767939}
   m_Layer: 8
   m_Name: ChickCube_yellow
-  m_TagString: Chicks
+  m_TagString: Chicken
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,7 +89,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1249588788427119542}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.01
   m_UseGravity: 1
@@ -112,44 +111,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 5c39ec134a75d4a87a4a69a1be8dc5de, type: 3}
---- !u!114 &3690148659933454452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249588788427119542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8629157661636464227, guid: 9dd5657363d08ab47983e97356cb8c97,
-            type: 3}
-          m_MethodName: OnLookItemBox
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  delegates: []
 --- !u!114 &8629157661636464227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,3 +135,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a8f490df8d198c45a3c4964bf6b4d25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inHand: 0
+  playerTr: {fileID: 0}
