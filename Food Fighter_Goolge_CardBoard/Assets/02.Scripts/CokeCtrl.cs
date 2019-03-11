@@ -18,6 +18,7 @@ public class CokeCtrl : MonoBehaviour
     private string cokeTag = "Coke";
 
 
+<<<<<<< HEAD
     //#region
     //private void OnEnable()
     //{
@@ -29,6 +30,19 @@ public class CokeCtrl : MonoBehaviour
     //    EyeCast.OnClick -= this.OnClick;
     //}
     //#endregion
+=======
+    #region
+    private void OnEnable()
+    {
+        EyeCast.OnClick += this.OnClick;
+    }
+
+    private void OnDisable()
+    {
+        EyeCast.OnClick -= this.OnClick;
+    }
+    #endregion
+>>>>>>> 8455f2ef3fd18386132250a27e916532554f977e
 
     private void Start()
     {

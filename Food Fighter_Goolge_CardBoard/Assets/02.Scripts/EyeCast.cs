@@ -15,6 +15,7 @@ public class EyeCast : MonoBehaviour
     private Transform tr;   //레이쏘는 지점
     private Ray ray;        //레이
     private RaycastHit hit; //레이 힛
+<<<<<<< HEAD
     private GameObject currHit;
     private GameObject prevHit;
 
@@ -22,6 +23,8 @@ public class EyeCast : MonoBehaviour
     private float startTime = 0;
 
     private bool isGazing = false;
+=======
+>>>>>>> 8455f2ef3fd18386132250a27e916532554f977e
 
 
     [Header("Bool trigger")]
@@ -33,9 +36,12 @@ public class EyeCast : MonoBehaviour
     public delegate void EyeHandler();  //이벤트 핸들할 델리
     public static event EyeHandler OnClick; //이벤트 델리 함수변수
 
+<<<<<<< HEAD
     private GameManager _gm = GameManager.Instance;
 
 
+=======
+>>>>>>> 8455f2ef3fd18386132250a27e916532554f977e
 
     void Start()
     {
@@ -46,11 +52,14 @@ public class EyeCast : MonoBehaviour
         tr = GetComponent<Transform>();
 
         Debug.DrawRay(ray.origin, ray.direction * rayDist, Color.green);
+<<<<<<< HEAD
 
         _gm = GameManager.Instance;
         //_gm.state = GameManager.ChickState.NORMAL;
 
 
+=======
+>>>>>>> 8455f2ef3fd18386132250a27e916532554f977e
     }
 
     void Update()
@@ -62,23 +71,47 @@ public class EyeCast : MonoBehaviour
         if (Physics.Raycast(ray, out hit, rayDist, 1 << LayerMask.NameToLayer("ITEM"))) //레이 ITEM 감지
         {
 
+<<<<<<< HEAD
 
             if (hit.collider.tag == chickTag)   //레이힛이 치킨태그 콜라이더라면?
             {
                 Debug.Log("치킨이 감지됐다!!");
                 isGazing = true;
                 GazeAction();
+=======
+            if (hit.collider.tag == chickTag)   //레이힛이 치킨태그 콜라이더라면?
+            {
+                Debug.Log("치킨이 감지됐다!!");     
+
+                this.hit.collider.SendMessage("OnClick", SendMessageOptions.DontRequireReceiver);   //OnClic 이벤트발동 메세지 발송
+
+                if (emptyChick) //치킨 플레이어 손 안 없다면?
+                {
+                    ChickCtrl.Instance.isMoving = true;
+                    emptyChick = false;
+                }
+                else
+                {
+                   
+                }           
+>>>>>>> 8455f2ef3fd18386132250a27e916532554f977e
             }
             else if (hit.collider.tag == cokeTag)
             {
                 Debug.Log("콜라가 감지됐다!!");
+<<<<<<< HEAD
 
                 //this.hit.collider.SendMessage("OnClick", SendMessageOptions.DontRequireReceiver);
+=======
+             
+                this.hit.collider.SendMessage("OnClick", SendMessageOptions.DontRequireReceiver);
+>>>>>>> 8455f2ef3fd18386132250a27e916532554f977e
 
                 //CokeCtrl.Instance.MoveCoke();
 
                 var _rb = GameObject.FindGameObjectWithTag(cokeTag).GetComponent<Rigidbody>();
                 _rb.AddForce(Vector3.up * 30f);
+<<<<<<< HEAD
             }
         }
         else isGazing = false;
@@ -115,5 +148,9 @@ public class EyeCast : MonoBehaviour
     void GazeBar()
     {
 
+=======
+            }        
+        }          
+>>>>>>> 8455f2ef3fd18386132250a27e916532554f977e
     }
 }

@@ -65,8 +65,12 @@
     <Compile Include="Assets\02.Scripts\CokeCtrl.cs" />
     <Compile Include="Assets\02.Scripts\EyeCast.cs" />
     <Compile Include="Assets\02.Scripts\GameManager.cs" />
+    <Compile Include="Assets\02.Scripts\LookItems.cs" />
+    <Compile Include="Assets\02.Scripts\MoveChicks.cs" />
     <Compile Include="Assets\02.Scripts\MyGizmos.cs" />
     <Compile Include="Assets\02.Scripts\PlayerCtrl.cs" />
+    <Compile Include="Assets\06.Etc\EyeChicks.cs" />
+    <Compile Include="Assets\06.Etc\PlayerMoveCtrl.cs" />
     <Compile Include="Assets\06.UnUsed\LookItems.cs" />
     <Compile Include="Assets\06.UnUsed\PlayerMoveCtrl.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Demos\Hello6DoFControllers\Scripts\DemoObjectController6DoF.cs" />
