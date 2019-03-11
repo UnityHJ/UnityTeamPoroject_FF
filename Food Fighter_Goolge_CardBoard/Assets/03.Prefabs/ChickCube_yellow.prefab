@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1249588788427119542}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -95,7 +95,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 1
 --- !u!64 &2913567617379748275
 MeshCollider:
@@ -135,10 +135,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a8f490df8d198c45a3c4964bf6b4d25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  playerTr: {fileID: 0}
-  targetTr: {x: 0, y: 0, z: 0}
-=======
   inHand: 0
   playerTr: {fileID: 0}
->>>>>>> 8455f2ef3fd18386132250a27e916532554f977e

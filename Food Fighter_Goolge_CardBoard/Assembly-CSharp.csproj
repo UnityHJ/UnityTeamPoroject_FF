@@ -71,8 +71,6 @@
     <Compile Include="Assets\02.Scripts\PlayerCtrl.cs" />
     <Compile Include="Assets\06.Etc\EyeChicks.cs" />
     <Compile Include="Assets\06.Etc\PlayerMoveCtrl.cs" />
-    <Compile Include="Assets\06.UnUsed\LookItems.cs" />
-    <Compile Include="Assets\06.UnUsed\PlayerMoveCtrl.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Demos\Hello6DoFControllers\Scripts\DemoObjectController6DoF.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrBeta.cs" />
     <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrBetaControllerVisualMulti.cs" />
