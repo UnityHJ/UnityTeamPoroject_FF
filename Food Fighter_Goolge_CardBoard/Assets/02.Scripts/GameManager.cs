@@ -4,26 +4,28 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [Header("Bread Create Info")]
+    public enum ChickState { NORMAL = 0, MOVING = 1, HELD = 2 };
+    public ChickState state = ChickState.NORMAL;
+
+    [Header("Chicks Create Info")]
     public Transform[] points;
-    public GameObject[] chicks;
+    public GameObject[] chicks;     //접시에 생성되는 치킨오브젝트
     public float createTime = 1.0f;
-    public int maxBread = 8;
-    public bool isGameOver = false;
-    public static GameManager instance = null;
-    public List<GameObject> breadPool = new List<GameObject>();
+    public int maxChicks;
+    public bool isTimeOver = false;
+    //public List<GameObject> ChicksPool = new List<GameObject>();
 
     public int randomIdx;
+    public GameObject handChicken;  //손에 들린 치킨오브젝트
 
 
-
-
+    public static GameManager Instance { get; set; }
 
     private void Awake()
     {
-        if (instance == null) instance = this;
-        else if (instance != null) Destroy(this.gameObject);
-        DontDestroyOnLoad(this.gameObject);        
+        if (Instance == null) Instance = this;
+        else if (Instance != null) Destroy(gameObject);
+        DontDestroyOnLoad(this);        
     }
 
 
@@ -32,24 +34,21 @@ public class GameManager : MonoBehaviour
         points = GameObject.Find("SpawnPointGroup").GetComponentsInChildren<Transform>();
         if (points.Length > 0)
         {
-            StartCoroutine(CreateBread());
+            StartCoroutine(CreateChicks());
         }
-
-
-        
 
 
     }
 
-    private IEnumerator CreateBread()
+    private IEnumerator CreateChicks()
     {
-        while (!isGameOver)
+        while (!isTimeOver)
         {
-            int breadCount = GameObject.FindGameObjectsWithTag("Bread").Length;
-            if (breadCount <= maxBread)
+            int chickCount = GameObject.FindGameObjectsWithTag("Chicken").Length;
+            if (chickCount < maxChicks)
             {
                 yield return new WaitForSeconds(createTime);
-                if (isGameOver) break;
+                if (isTimeOver) break;
                 int idx = Random.Range(2, points.Length);
                 randomIdx = Random.Range(0, chicks.Length);
                 
@@ -71,5 +70,5 @@ public class GameManager : MonoBehaviour
             }
             else yield return null;
         }
-    }
+    }   
 }

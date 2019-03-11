@@ -1,0 +1,2 @@
+C:\HJ\UnityTeamPoroject_FF\Food Fighter_Goolge_CardBoard\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\HJ\UnityTeamPoroject_FF\Food Fighter_Goolge_CardBoard\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
