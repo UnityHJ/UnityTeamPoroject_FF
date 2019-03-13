@@ -16,7 +16,7 @@ public class EyeCast : MonoBehaviour
     private Ray ray;        //레이
     private RaycastHit hit; //레이 힛
     private GameObject currHit;
-    private GameObject prevHit;
+    private GameObject prevHit = null;
 
     public float passTime = 2f;
     private float startTime = 0;
@@ -24,9 +24,9 @@ public class EyeCast : MonoBehaviour
     private bool isGazing = false;
 
 
-    [Header("Bool trigger")]
-    public bool emptyChick = true;      //치킨 플레이어 손 안 유무
-    public bool emptyCoke = true;       //코크 플레이어 손 안 유무
+    [Header("Bool")]
+    //public bool emptyChick = true;      //치킨 플레이어 손 안 유무
+    //public bool emptyCoke = true;       //코크 플레이어 손 안 유무
 
     public static EyeCast Instance;
 
@@ -56,81 +56,71 @@ public class EyeCast : MonoBehaviour
     void Update()
     {
         Debug.DrawRay(ray.origin, ray.direction * rayDist, Color.green);
-
         ray = new Ray(tr.position, tr.forward * rayDist);
+
+
 
         if (Physics.Raycast(ray, out hit, rayDist, 1 << LayerMask.NameToLayer("ITEM"))) //레이 ITEM 감지
         {
-
-
-            if (hit.collider.tag == chickTag)   //레이힛이 치킨태그 콜라이더라면?
+            if (_gm.chikState == ChickState.HELD || _gm.cokeState == CokeState.HELD)
             {
-                Debug.Log("치킨이 감지됐다!!");
-                isGazing = true;
-                GazeAction();
-                if (hit.collider.tag == chickTag)   //레이힛이 치킨태그 콜라이더라면?
-                {
-                    Debug.Log("치킨이 감지됐다!!");
-                  
-
-                    if (emptyChick) //치킨 플레이어 손 안 없다면?
-                    {
- 
-                        emptyChick = false;
-                    }
-                    else
-                    {
-
-                    }
-                }
-                else if (hit.collider.tag == cokeTag)
-                {
-                    Debug.Log("콜라가 감지됐다!!");
-
-                    //this.hit.collider.SendMessage("OnClick", SendMessageOptions.DontRequireReceiver);
-
-                    this.hit.collider.SendMessage("OnClick", SendMessageOptions.DontRequireReceiver);
-
-                    //CokeCtrl.Instance.MoveCoke();
-
-                    var _rb = GameObject.FindGameObjectWithTag(cokeTag).GetComponent<Rigidbody>();
-                    _rb.AddForce(Vector3.up * 30f);
-                }
-            }
-            else isGazing = false;
-        }
-
-        void GazeAction()
-        {
-            if (isGazing)
-            {
-                startTime += Time.deltaTime;
-                currHit = this.hit.collider.gameObject;
-
-                if (currHit != prevHit)
-                {
-                    startTime = 0;
-                    prevHit = currHit;
-                    return;
-                }
-
-                if (startTime >= passTime)
-                {
-                    this.hit.collider.SendMessage("OnClick", SendMessageOptions.DontRequireReceiver);
-                    _gm.state = GameManager.ChickState.MOVING;
-                }
-
-                GazeBar();
+                isGazing = false;
+                return;
             }
             else
             {
-                startTime = 0;
+                isGazing = true;
+                GazeAction(isGazing);
+                if (hit.collider.tag == chickTag)   //레이힛이 치킨태그 콜라이더라면?
+                {
+                    Debug.Log("[GazeAction] 치킨이 감지됐다!!");
+                }
+                else if (hit.collider.tag == cokeTag)
+                {
+                    Debug.Log("[GazeAction] 콜라가 감지됐다!!");
+                    //this.hit.collider.SendMessage("OnClick", SendMessageOptions.DontRequireReceiver);
+                    //CokeCtrl.Instance.MoveCoke();
+                }
             }
+        }
+        //isGazing = true;
+        //    GazeAction();               
+
+        //else isGazing = false;        
+
+        void GazeAction(bool isGaze)
+        {
+            startTime += Time.deltaTime;            //2초 시간이 채워진 변수
+            currHit = this.hit.collider.gameObject; //현재 레이로 감지된 아이템
+
+            if (currHit != prevHit) //현재
+            {
+                startTime = 0;
+                prevHit = currHit;
+                return;
+            }
+
+            else
+            {
+                if (startTime >= passTime)  //2초가 넘는다면,
+                {
+                    this.hit.collider.SendMessage("OnClick", SendMessageOptions.DontRequireReceiver);
+
+                    if (this.hit.collider.tag == chickTag)
+                    {
+                        _gm.chikState = ChickState.MOVING; 
+                    }
+                    else if (this.hit.collider.tag == cokeTag)
+                    {
+                        _gm.cokeState = CokeState.MOVING; 
+                    }
+                }
+            }
+            GazeBar();                              //시간 서클도는 매서드
         }
 
         void GazeBar()
         {
-
 
         }
     }

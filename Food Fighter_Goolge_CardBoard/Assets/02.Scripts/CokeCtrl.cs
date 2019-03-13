@@ -5,74 +5,59 @@ using UnityEngine.EventSystems;
 
 public class CokeCtrl : MonoBehaviour
 {
-    public static CokeCtrl Instance;    
-
-    private Transform tr;
-    private Transform cokeTr;
-    private Ray ray;
-    private RaycastHit hit;
-    
-    private Rigidbody rb;
-
+    [Header("item Tag Name")]
     private string chickTag = "Chicken";
     private string cokeTag = "Coke";
 
+    [Header("GameManager Instance")]
+    private GameManager _gm;
+    
+    private Transform cokeTr;
+   
+    private Rigidbody rb;
+    private Vector3 targetTr = new Vector3(0, 0, 0);
 
-    //#region
-    //private void OnEnable()
-    //{
-    //    EyeCast.OnClick += this.OnClick;
-    //}
+    public Transform playerTr;
 
-    //private void OnDisable()
-    //{
-    //    EyeCast.OnClick -= this.OnClick;
-    //}
-    //#endregion
-    #region
-    private void OnEnable()
-    {
-        EyeCast.OnClick += this.OnClick;
-    }
 
-    private void OnDisable()
-    {
-        EyeCast.OnClick -= this.OnClick;
-    }
-    #endregion
 
     private void Start()
-    {
-        if (Instance == null) Instance = this;
-        else if (Instance != null) Destroy(this);
-        DontDestroyOnLoad(this);        
-
-        tr = GetComponent<Transform>();
-        rb = GetComponent<Rigidbody>();
-
-        cokeTr = GameObject.Find("cokePos").GetComponent<Transform>();
+    { 
+        cokeTr = GetComponent<Transform>();
+        rb = GetComponent<Rigidbody>();        
+        _gm = GameManager.Instance;
+        _gm.cokeState = CokeState.NORMAL;
     }
-
-
-
-
-
 
     public void OnClick()
     {
-        //yield return new WaitForSeconds(3.0f);
-             
-        
-    }
-
-    public void MoveCoke()
-    {        
-        EyeCast.Instance.emptyCoke = false;
-        //tr.transform.position = new Vector3(0, -3, -2);
-        
-        this.transform.SetParent(cokeTr);
+ 
+        StartCoroutine(MoveCoke());
         Debug.Log("콜라 이벤트 발생!!");
 
+    }
+
+    public IEnumerator MoveCoke()
+    {
+        //EyeCast.Instance.emptyChick = false;
+        while (_gm.cokeState == CokeState.MOVING)
+        {
+
+            float dist = Vector3.Distance(playerTr.position, cokeTr.position);
+            if (dist > 1f)
+            {
+                //_gm.cokeState = GameManager.CokeState.MOVING;
+                targetTr = playerTr.position - cokeTr.position;  //치킨과 플레이어 앞 위치까지 방향
+                cokeTr.position += targetTr * Time.deltaTime * 5f;
+            }
+            else
+            {
+                _gm.cokeState = CokeState.HELD;
+            }
+
+            Debug.Log("[MoveCoke] 콜.라.가~~ 이.동.한.다.");
+            yield return null;
+        }
     }
 
 

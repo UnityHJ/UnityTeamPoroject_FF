@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 
 public class ChickCtrl : MonoBehaviour
 {
+    [Header("GameManager Instance")]
     private GameManager _gm;
 
     [Header("Transform Position")]
@@ -19,30 +20,13 @@ public class ChickCtrl : MonoBehaviour
 
     private Rigidbody rb;
 
-
-    //#region
-    //private void OnEnable()
-    //{
-    //    EyeCast.OnClick += this.OnClick;
-    //}
-
-    //private void OnDisable()
-    //{
-    //    EyeCast.OnClick -= this.OnClick;
-    //}
-    //#endregion  //OnClick 으로 작용될 
-
     private void Start()
     {
         chickTr = GetComponent<Transform>();
         rb = GetComponent<Rigidbody>();
         _gm = GameManager.Instance;
-
+        _gm.chikState = ChickState.NORMAL;
     }
- 
-
-    
-
 
     void Update()
     {
@@ -65,43 +49,40 @@ public class ChickCtrl : MonoBehaviour
 
     public void OnClick()
     {
-        //yield return new WaitForSeconds(3.0f);
-        Debug.Log("치킨 이벤트 발생!!" + gameObject.name);
+        //_gm.chikState = ChickState.NORMAL;   
         StartCoroutine(MoveChicken());
-        Debug.Log("치킨 이벤트 발생!!");
+        Debug.Log("[OnClic]치킨 이벤트 발생!!");
     }
 
     public IEnumerator MoveChicken()
     {
+        Debug.Log("[MoveChicken]치킨 이벤트 발생!!");
         //EyeCast.Instance.emptyChick = false;
-        while (_gm.state == GameManager.ChickState.MOVING)
+        while (_gm.chikState == ChickState.MOVING)
         {
             
-            float dist = Vector3.Distance(playerTr.position, chickTr.position);
-            if (dist > 1f)
+            double dist = Vector3.Distance(playerTr.position, chickTr.position);
+            if (dist >= 0.0)
             {
-                _gm.state = GameManager.ChickState.MOVING;
+                //_gm.chikState = GameManager.ChickState.MOVING;
                 targetTr = playerTr.position - chickTr.position;  //치킨과 플레이어 앞 위치까지 방향
+
                 chickTr.position += targetTr * Time.deltaTime * 5f;
+                Debug.Log("치.킨.이~~ 이.동.한.다.");
+                
             }
             else
-            {
-                _gm.state = GameManager.ChickState.HELD;
+            {                
+                _gm.chikState = ChickState.HELD;
+                Debug.Log("[MoveChicken] 치킨이 손.안.에 있다!!");
             }
 
-            Debug.Log("치.킨.이~~ 이.동.한.다.");
-            yield return null;
+            yield return new WaitForSeconds(3f);
+
+            Destroy(this.gameObject);
+            _gm.chikState = ChickState.NORMAL;
         }
-
-        
-
-        
-        //EyeCast.Instance.emptyChick = false;
-
-        Debug.Log("치.킨.이~~ 이.동.한.다.");
-        targetTr = playerTr.position - chickTr.position;  //치킨과 플레이어 앞 위치까지 방향
-        chickTr.position += targetTr * Time.deltaTime * 5f;
-        yield return null;
-
     }
+
+    
 }
