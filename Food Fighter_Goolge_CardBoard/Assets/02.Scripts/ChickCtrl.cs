@@ -13,7 +13,7 @@ public class ChickCtrl : MonoBehaviour
     [Header("Transform Position")]
     private Transform chickTr;  //치킨 위치
     private Vector3 targetTr = new Vector3(0, 0, 0);
-    public Transform playerTr;  //플레이어 앞에 치킨이 놓일 위치
+    private Transform playerTr;  //플레이어 앞에 치킨이 놓일 위치
 
     //public bool isMoving = false;
     //public bool isHeld = false;
@@ -25,7 +25,7 @@ public class ChickCtrl : MonoBehaviour
         chickTr = GetComponent<Transform>();
         rb = GetComponent<Rigidbody>();
         _gm = GameManager.Instance;
-        _gm.chikState = ChickState.NORMAL;
+        playerTr = GameObject.Find("PlayerPos").GetComponent<Transform>();
     }
 
     void Update()
