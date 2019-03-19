@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
         int idx = 0;
         while (!isTimeOver)
         {
-            int chickCount = GameObject.FindGameObjectsWithTag("Chicken").Length;
+            int chickCount = GameObject.FindGameObjectsWithTag("CHICKEN").Length;
             if (chickCount < maxChicks)
             {
                 yield return new WaitForSeconds(createTime);
