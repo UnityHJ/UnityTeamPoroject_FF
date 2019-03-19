@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        points = GameObject.Find("SpawnPointGroup").GetComponentsInChildren<Transform>();
+        //points = GameObject.Find("SpawnPointGroup").GetComponentsInChildren<Transform>();
         if (points.Length > 0)
         {
             StartCoroutine(CreateChicks());
@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator CreateChicks()
     {
+        int idx = 0;
         while (!isTimeOver)
         {
             int chickCount = GameObject.FindGameObjectsWithTag("Chicken").Length;
@@ -64,10 +65,14 @@ public class GameManager : MonoBehaviour
             {
                 yield return new WaitForSeconds(createTime);
                 if (isTimeOver) break;
-                int idx = Random.Range(2, points.Length);
+                idx = idx % points.Length;
+
+                //int idx = Random.Range(2, points.Length);
                 int randomIdx = Random.Range(0, chicks.Length);
 
                 GameObject.Instantiate(chicks[randomIdx], points[idx].position, points[idx].rotation);
+                idx++;
+
                 //GameObject.Instantiate(chicks[randomIdx], points[2].position, points[pointIdx].rotation);
 
                 //for (int i = 0; i < breadPool.Count; i++)
