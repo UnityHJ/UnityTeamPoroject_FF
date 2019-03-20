@@ -5,48 +5,99 @@ using UnityEngine;
 public class FoodsCtrl : MonoBehaviour
 {
     private const string TAG = "FoodsCtrl";
-    private GameManager _gm;
     private Transform eatingTr;
+    private Transform drinkingTr;
+    private Vector3 originPos;
     private Rigidbody rb;
 
     public float speed = 5.0f;
 
     void Start()
     {
-        _gm = GameManager.Instance;
         rb = GetComponent<Rigidbody>();
-        eatingTr = GameObject.Find("PlayerPos").GetComponent<Transform>();
+        eatingTr = GameObject.Find("EatPos").GetComponent<Transform>();
+        drinkingTr = GameObject.Find("DrinkPos").GetComponent<Transform>();
     }
 
     public void OnClick()
     {
         Debug.Log(TAG + " [OnClick] ");
+        originPos = transform.position;
         StartCoroutine(MoveToPos());
     }
 
-    
+
     private IEnumerator MoveToPos()
     {
         Debug.Log(TAG + " [MoveToPos] ");
-        while (_gm.chikState == ChickState.MOVING)
+        rb.isKinematic = true;
+        while (GameManager.Instance.itemState == ItemState.MOVING)
         {
-
-            float dis = Vector3.Distance(transform.position, eatingTr.position);
-            if(dis > 0.1f)
+            Transform tr = eatingTr;
+            if (tag == "COKE")
             {
-                transform.position = Vector3.Lerp(transform.position, eatingTr.position, Time.deltaTime * speed);
+                tr = drinkingTr;
+            }
+
+            float dis = Vector3.Distance(transform.position, tr.position);
+            if (dis > 0.01f)
+            {
+                transform.position = Vector3.Lerp(transform.position, tr.position, Time.deltaTime * speed);
+                transform.rotation = Quaternion.Lerp(transform.rotation, tr.rotation, Time.deltaTime * speed);
             }
             else
             {
-                rb.isKinematic = true;
+
                 Debug.Log(TAG + " [MoveToPos] is Held");
-                _gm.chikState = ChickState.HELD;
-                yield return new WaitForSeconds(3.0f);
-                _gm.chikState = ChickState.NORMAL;
-                Destroy(gameObject);
+                GameManager.Instance.itemState = ItemState.HELD;
+                if (tag == "COKE")
+                {
+                    StartCoroutine(Drink());
+                }
+                else
+                {
+                    StartCoroutine(EatChicken());
+                }
+
                 break;
             }
             yield return null;
         }
+    }
+
+
+    private IEnumerator EatChicken()
+    {
+        Debug.Log(TAG + " [EatChicken]");
+        for (int i = 0; i < 3; i++)
+        {
+            float audioTime = SoundCtrl.Instance.MakeSounds(SoundEffects.BITE);
+            yield return new WaitForSeconds(audioTime);
+            audioTime = SoundCtrl.Instance.MakeSounds(SoundEffects.CHEW);
+            GameManager.Instance.EatSome(5.0f);
+            if (i == 2)
+            {
+                GameManager.Instance.itemState = ItemState.NORMAL;
+                Destroy(gameObject);
+            }
+            yield return new WaitForSeconds(audioTime);
+        }
+
+    }
+
+    private IEnumerator Drink()
+    {
+        Debug.Log(TAG + " [Drink]");
+        float audioTime = SoundCtrl.Instance.MakeSounds(SoundEffects.DRINK);
+        GameManager.Instance.DrinkSome(3.0f);
+        yield return new WaitForSeconds(audioTime);
+        GameManager.Instance.itemState = ItemState.NORMAL;
+        float dis = Vector3.Distance(transform.position, originPos);
+        while (true)
+        {
+            transform.position = Vector3.Lerp(transform.position, originPos, Time.deltaTime * speed * 2);
+            yield return null;
+        }
+
     }
 }
