@@ -83,7 +83,7 @@ public class FoodsCtrl : MonoBehaviour
         {
             while (true)
             {
-                transform.position = Vector3.Lerp(transform.position, eatingTr.position, Time.deltaTime * speed * 1.5f);
+                transform.position = Vector3.Slerp(transform.position, eatingTr.position, Time.deltaTime * speed * 1.5f);
                 float dis = Vector3.Distance(transform.position, eatingTr.position);
 
                 if(dis < 0.005f)
@@ -101,7 +101,7 @@ public class FoodsCtrl : MonoBehaviour
             transform.rotation = chickTr.rotation;
             while (true)
             {
-                transform.position = Vector3.Lerp(transform.position, chickTr.position, Time.deltaTime * speed * 1.5f);
+                transform.position = Vector3.Slerp(transform.position, chickTr.position, Time.deltaTime * speed * 1.5f);
                 float dis = Vector3.Distance(transform.position, chickTr.position);
                 if (dis < 0.001f)
                 {
@@ -136,10 +136,10 @@ public class FoodsCtrl : MonoBehaviour
 
         while (true)
         {
-            transform.position = Vector3.Lerp(transform.position, originPos, Time.deltaTime * speed);
+            transform.position = Vector3.Slerp(transform.position, originPos, Time.deltaTime * speed);
             yield return null;
             float dis = Vector3.Distance(transform.position, originPos);
-            if (dis < 0.001f)
+            if (dis < 0.01f)
             {
                 transform.position = originPos;
                 Debug.Log(TAG + " [Drink] break");

@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/01.Scenes/Intro.unity
+    guid: ad7f424f85b32b340b97937fd097a9c6
+  - enabled: 1
+    path: Assets/01.Scenes/SceneChanger.unity
+    guid: faf57800e16a05b44baaa4e6f7ccefaf
+  - enabled: 1
     path: Assets/01.Scenes/FoodFighter.unity
     guid: 40be9ab1dcaef0f49b73cb57418662c4
   m_configObjects: {}
