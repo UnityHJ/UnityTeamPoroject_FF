@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1848583761631570568}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.26}
   m_Children: []
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2cd25fa514518364195833dfb88e33b9, type: 3}
+  - {fileID: 2100000, guid: b0092025d33746145a46b17871ec43ad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -123,3 +123,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  eatVal: 10
+  eatCal: 79
+  drinkCal: 14
+  meshs:
+  - {fileID: 4300000, guid: 2cd25fa514518364195833dfb88e33b9, type: 3}
+  - {fileID: 4300000, guid: 379114f37502fc6498a7ebf9af5db4ff, type: 3}
+  - {fileID: 4300000, guid: e82ff3c8e5f70f24dbec74b4b6612e34, type: 3}
+  textures:
+  - {fileID: 2100000, guid: 2cd25fa514518364195833dfb88e33b9, type: 3}
+  - {fileID: 2100000, guid: 379114f37502fc6498a7ebf9af5db4ff, type: 3}
+  - {fileID: 2100000, guid: e82ff3c8e5f70f24dbec74b4b6612e34, type: 3}

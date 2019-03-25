@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum SoundEffects { BITE, CHEW, BURP, DRINK, SWALLOW }
+public enum SoundEffects { BITE, CHEW, BURP, DRINK, SWALLOW, KYAH, TRASH }
 
 public class SoundCtrl : MonoBehaviour
 {
@@ -16,13 +16,13 @@ public class SoundCtrl : MonoBehaviour
     public AudioClip[] drinkClips;
     public AudioClip[] swallowClips;
     public AudioClip[] trashClips;
+    public AudioClip[] kyahClips;
     
 
     private void Awake()
     {
         if (Instance == null) Instance = this;
         else if (Instance != null) Destroy(gameObject);
-        DontDestroyOnLoad(this);
     }
 
     private void Start()
@@ -55,6 +55,14 @@ public class SoundCtrl : MonoBehaviour
             case SoundEffects.SWALLOW:
                 idx = Random.Range(0, swallowClips.Length);
                 clip = swallowClips[idx];
+                break;
+            case SoundEffects.KYAH:
+                idx = Random.Range(0, kyahClips.Length);
+                clip = kyahClips[idx];
+                break;
+            case SoundEffects.TRASH:
+                idx = Random.Range(0, trashClips.Length);
+                clip = trashClips[idx];
                 break;
         }
         _audio.PlayOneShot(clip, 1.0f);

@@ -1,11 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public enum ChickState { NORMAL = 0, MOVING = 1, HELD = 2 }
 public enum CokeState { NORMAL, MOVING, HELD }
 public enum ItemState { NORMAL, MOVING, HELD, WAIT }
+public enum UIState { NORMAL, WAIT }
 
 public class GameManager : MonoBehaviour
 {
@@ -13,11 +16,21 @@ public class GameManager : MonoBehaviour
     public ChickState chikState = ChickState.NORMAL;
     public CokeState cokeState = CokeState.NORMAL;
     public ItemState itemState = ItemState.NORMAL;
+    public UIState uiState = UIState.NORMAL;
+
+    public int Kcal { get; set; }
 
     public static GameManager Instance { get; set; }
 
+
+    [Header("Fade In")]
+    [Range(0.5f, 2.0f)]
+    public float fadeDuration = 1.0f;
+    public CanvasGroup fadeCg;
+
+    public Text calTxt;
+
     [Header("Chicks Create Info")]
-    
     public Transform[] points;
 
     public GameObject[] chicks;     //접시에 생성되는 치킨오브젝트
@@ -28,13 +41,13 @@ public class GameManager : MonoBehaviour
     public float gaugeTime = 0.5f;
     public int maxChicks;
     public bool isTimeOver = false;
+    public bool isFull = false;
     //public List<GameObject> ChicksPool = new List<GameObject>();
 
     //public int randomIdx;
     public GameObject handChicken;  //손에 들린 치킨오브젝트
     
-    public bool isGameOver = false;
-    public static GameManager instance = null;
+    //public static GameManager instance = null;
     //public List<GameObject> ChicksPool = new List<GameObject>();
 
     public List<GameObject> chickPool = new List<GameObject>();
@@ -45,7 +58,7 @@ public class GameManager : MonoBehaviour
     {
         if (Instance == null) Instance = this;
         else if (Instance != null) Destroy(gameObject);
-        DontDestroyOnLoad(this);
+        //DontDestroyOnLoad(this);
         
     }
 
@@ -57,7 +70,11 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(CreateChicks());
         }
+        fadeCg.alpha = 1.0f;
+        StartCoroutine(FadeIn());
         StartCoroutine(ReducingGauge());
+        Kcal = 0;
+        UpdateCal(0);
 
     }
 
@@ -74,8 +91,8 @@ public class GameManager : MonoBehaviour
                 idx = idx % points.Length;
 
                 //int idx = Random.Range(2, points.Length);
-                int randomIdx = Random.Range(0, chicks.Length);
-
+                int randomIdx = UnityEngine.Random.Range(0, chicks.Length);
+                if (points[idx] == null) break;
                 GameObject.Instantiate(chicks[randomIdx], points[idx].position, points[idx].rotation);
                 idx++;
 
@@ -98,11 +115,13 @@ public class GameManager : MonoBehaviour
     }
     public void EatSome(float value)
     {
+        if (isTimeOver) return;
         StartCoroutine(GaugeUp(value));
     }
 
     public void DrinkSome(float value)
     {
+        if (isTimeOver) return;
         StartCoroutine(GaugeBoost(value));
     }
 
@@ -135,10 +154,24 @@ public class GameManager : MonoBehaviour
         {
             if(mukGauge.fillAmount > 0)
             {
+                isFull = mukGauge.fillAmount > 0.97f;
                 mukGauge.fillAmount -= reducingValue;
             }
             yield return new WaitForSeconds(reducingTime);
         }
+    }
+
+    private IEnumerator FadeIn()
+    {
+        Debug.Log("[FadeIn]");
+        fadeCg.blocksRaycasts = true;
+        float fadeSpeed = Mathf.Abs(fadeCg.alpha) / fadeDuration;
+        while (!Mathf.Approximately(fadeCg.alpha, 0.0f))
+        {
+            fadeCg.alpha = Mathf.MoveTowards(fadeCg.alpha, 0.0f, fadeSpeed * Time.deltaTime);
+            yield return null;
+        }
+        fadeCg.blocksRaycasts = false;
     }
 
     //public void CreatePooling()
@@ -153,4 +186,45 @@ public class GameManager : MonoBehaviour
     //        chickPool.Add(obj);
     //    }
     //}
+    private IEnumerator FadeOut(Action callback)
+    {
+        Debug.Log("[FadeOut]");
+        fadeCg.blocksRaycasts = true;
+        float fadeSpeed = fadeDuration;
+        while (!Mathf.Approximately(fadeCg.alpha, 1.0f))
+        {
+            fadeCg.alpha = Mathf.MoveTowards(fadeCg.alpha, 1.0f, fadeSpeed * Time.deltaTime);
+            yield return null;
+        }
+        fadeCg.blocksRaycasts = false;
+        callback();
+    }
+
+    public void ReTry()
+    {
+        Debug.Log("[ReTry]");
+        uiState = UIState.WAIT;
+        StartCoroutine(FadeOut(delegate ()
+        {
+            SceneManager.LoadScene("FoodFighter");
+        }));
+
+    }
+
+    public void GoTitle()
+    {
+        Debug.Log("[GoTitle]");
+        uiState = UIState.WAIT;
+        StartCoroutine(FadeOut(delegate ()
+        {
+            SceneManager.LoadScene("Intro");
+        }));
+    }
+
+    public void UpdateCal(int kcal)
+    {
+        if (isTimeOver) return;
+        Kcal += kcal;
+        calTxt.text = Kcal + " Kcal";
+    }
 }

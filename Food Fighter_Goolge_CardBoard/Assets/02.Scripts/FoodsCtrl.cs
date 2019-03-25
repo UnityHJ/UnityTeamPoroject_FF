@@ -15,6 +15,9 @@ public class FoodsCtrl : MonoBehaviour
     private MeshCollider _meshColl;
 
     public float speed = 5.0f;
+    public float eatVal = 10.0f;
+    public int eatCal = 79;
+    public int drinkCal = 14;
     public Mesh[] meshs;
     public Material[] textures;
 
@@ -81,6 +84,11 @@ public class FoodsCtrl : MonoBehaviour
         Debug.Log(TAG + " [EatChicken]");
         for (int i = 0; i < 3; i++)
         {
+            if (GameManager.Instance.isTimeOver)
+            {
+                Destroy(gameObject);
+                break;
+            }
             while (true)
             {
                 transform.position = Vector3.Slerp(transform.position, eatingTr.position, Time.deltaTime * speed * 1.5f);
@@ -111,13 +119,16 @@ public class FoodsCtrl : MonoBehaviour
                 yield return null;
             }
             audioTime = SoundCtrl.Instance.MakeSounds(SoundEffects.CHEW);
-            GameManager.Instance.EatSome(5.0f);
+            yield return new WaitForSeconds(audioTime + GameManager.Instance.mukGauge.fillAmount * 2);
+            audioTime = SoundCtrl.Instance.MakeSounds(SoundEffects.SWALLOW);
+            GameManager.Instance.EatSome(eatVal);
+            GameManager.Instance.UpdateCal(eatCal);
             if (i == 2)
             {
                 GameManager.Instance.itemState = ItemState.NORMAL;
                 Destroy(gameObject);
             }
-            yield return new WaitForSeconds(audioTime);
+            yield return new WaitForSeconds(audioTime + GameManager.Instance.mukGauge.fillAmount * 2);
         }
 
     }
@@ -127,12 +138,27 @@ public class FoodsCtrl : MonoBehaviour
         Debug.Log(TAG + " [Drink]");
         for (int i = 0; i < 3; i++)
         {
+            if (GameManager.Instance.isTimeOver)
+            {
+                break;
+            }
             float audioTime = SoundCtrl.Instance.MakeSounds(SoundEffects.DRINK);
             yield return new WaitForSeconds(audioTime + 0.5f);
+            GameManager.Instance.UpdateCal(drinkCal);
         }
-        GameManager.Instance.DrinkSome(3.0f);
-        SoundCtrl.Instance.MakeSounds(SoundEffects.BURP);
+        Debug.Log(TAG + " [Drink] reducingTime : " + GameManager.Instance.reducingTime);
+        if (GameManager.Instance.reducingTime != 1.0f)
+        {
+            float audioTime = SoundCtrl.Instance.MakeSounds(SoundEffects.BURP);
+            yield return new WaitForSeconds(audioTime + 0.5f);
+        }
+        else
+        {
+            SoundCtrl.Instance.MakeSounds(SoundEffects.KYAH);
+        }
         GameManager.Instance.itemState = ItemState.NORMAL;
+        GameManager.Instance.DrinkSome(3.0f);
+
 
         while (true)
         {

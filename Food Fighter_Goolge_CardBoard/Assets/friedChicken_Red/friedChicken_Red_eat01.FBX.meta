@@ -1,22 +1,20 @@
 fileFormatVersion: 2
-guid: a42acff1963cfaf49aa76e898fd91710
+guid: 992691b9a2094a042b01f80dc201c520
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: bone
-    100002: Chicken_red
-    100004: //RootNode
-    400000: bone
-    400002: Chicken_red
-    400004: //RootNode
-    2100000: chiken
+    100000: Chicken_red_eat01_bone
+    100002: //RootNode
+    400000: Chicken_red_eat01_bone
+    400002: //RootNode
+    2100000: chiken1
     2100002: 'Material #381'
-    2300000: bone
-    2300002: Chicken_red
-    3300000: bone
-    3300002: Chicken_red
-    4300000: Chicken_red
-    4300002: bone
+    2300000: Chicken_red_eat01_bone
+    2300002: //RootNode
+    3300000: Chicken_red_eat01_bone
+    3300002: //RootNode
+    4300000: Chicken_red_eat01
+    4300002: Chicken_red_eat01_bone
   externalObjects: {}
   materials:
     importMaterials: 1

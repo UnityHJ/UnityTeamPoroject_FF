@@ -29,6 +29,7 @@ public class SceneChanger : MonoBehaviour
 
     private IEnumerator FadeIn()
     {
+        Debug.Log("[FadeIn]");
         fadeCg.blocksRaycasts = true;
         float fadeSpeed = Mathf.Abs(fadeCg.alpha) / fadeDuration;
         while (!Mathf.Approximately(fadeCg.alpha, 0.0f))
