@@ -13,6 +13,9 @@ public enum UIState { NORMAL, WAIT }
 public class GameManager : MonoBehaviour
 {
     private const string TAG = "GameManager";
+    private readonly Color initColor = new Vector4(0f, 1f, 0f, 1f);
+    private Color currColor;
+
     public ChickState chikState = ChickState.NORMAL;
     public CokeState cokeState = CokeState.NORMAL;
     public ItemState itemState = ItemState.NORMAL;
@@ -134,6 +137,7 @@ public class GameManager : MonoBehaviour
         {
             gaugeSum += Time.deltaTime * damp;
             mukGauge.fillAmount += Time.deltaTime * damp;
+            SetMukGaugeColor();
             yield return null;
             if (mukGauge.fillAmount >= 1.0f || gaugeSum >= value / 100.0f)
                 break;
@@ -150,9 +154,11 @@ public class GameManager : MonoBehaviour
     
     private IEnumerator ReducingGauge()
     {
+        currColor = initColor;
         while(true)
         {
-            if(mukGauge.fillAmount > 0)
+            SetMukGaugeColor();
+            if (mukGauge.fillAmount > 0)
             {
                 isFull = mukGauge.fillAmount > 0.97f;
                 mukGauge.fillAmount -= reducingValue;
@@ -226,5 +232,12 @@ public class GameManager : MonoBehaviour
         if (isTimeOver) return;
         Kcal += kcal;
         calTxt.text = Kcal + " Kcal";
+    }
+
+    private void SetMukGaugeColor()
+    {
+        currColor.r = mukGauge.fillAmount * 2f;
+        currColor.g = (1f - mukGauge.fillAmount) * 2f;
+        mukGauge.color = currColor;
     }
 }

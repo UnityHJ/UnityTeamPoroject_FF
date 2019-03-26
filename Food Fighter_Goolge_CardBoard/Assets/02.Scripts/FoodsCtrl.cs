@@ -14,6 +14,8 @@ public class FoodsCtrl : MonoBehaviour
     private MeshRenderer _renderer;
     private MeshCollider _meshColl;
 
+    public float throwForce = 100.0f;
+    public float spinForce = 10.0f;
     public float speed = 5.0f;
     public float eatVal = 10.0f;
     public int eatCal = 79;
@@ -109,7 +111,7 @@ public class FoodsCtrl : MonoBehaviour
             transform.rotation = chickTr.rotation;
             while (true)
             {
-                transform.position = Vector3.Slerp(transform.position, chickTr.position, Time.deltaTime * speed * 1.5f);
+                transform.position = Vector3.Slerp(transform.position, chickTr.position, Time.deltaTime * speed * 2.5f);
                 float dis = Vector3.Distance(transform.position, chickTr.position);
                 if (dis < 0.001f)
                 {
@@ -119,18 +121,28 @@ public class FoodsCtrl : MonoBehaviour
                 yield return null;
             }
             audioTime = SoundCtrl.Instance.MakeSounds(SoundEffects.CHEW);
+            if (i == 2)
+            {
+                GameManager.Instance.itemState = ItemState.NORMAL;
+                //Destroy(gameObject);
+                ThrowBone();
+            }
             yield return new WaitForSeconds(audioTime + GameManager.Instance.mukGauge.fillAmount * 2);
             audioTime = SoundCtrl.Instance.MakeSounds(SoundEffects.SWALLOW);
             GameManager.Instance.EatSome(eatVal);
             GameManager.Instance.UpdateCal(eatCal);
-            if (i == 2)
-            {
-                GameManager.Instance.itemState = ItemState.NORMAL;
-                Destroy(gameObject);
-            }
+            
             yield return new WaitForSeconds(audioTime + GameManager.Instance.mukGauge.fillAmount * 2);
         }
 
+    }
+
+    private void ThrowBone()
+    {
+        rb.isKinematic = false;
+        float randomForce = Random.Range(throwForce * 0.8f, throwForce * 1.2f);
+        rb.AddForce(new Vector3(1.0f, 2.0f, 1.0f).normalized * randomForce, ForceMode.Force);
+        rb.AddTorque(Random.insideUnitSphere.normalized * spinForce, ForceMode.Force);
     }
 
     private IEnumerator Drink()
