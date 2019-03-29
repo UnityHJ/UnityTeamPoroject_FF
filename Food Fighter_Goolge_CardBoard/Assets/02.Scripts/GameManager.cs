@@ -37,12 +37,14 @@ public class GameManager : MonoBehaviour
     public Transform[] points;
 
     public GameObject[] chicks;     //접시에 생성되는 치킨오브젝트
+    public GameObject chickSpawnEffect;     //치킨 생성시 이펙트
     public Image mukGauge;
     public float reducingTime = 1.0f;
     public float reducingValue = 0.002f;
     public float createTime = 1.0f;
     public float gaugeTime = 0.5f;
     public int maxChicks;
+    public int chickCount;
     public bool isTimeOver = false;
     public bool isFull = false;
     //public List<GameObject> ChicksPool = new List<GameObject>();
@@ -84,9 +86,10 @@ public class GameManager : MonoBehaviour
     private IEnumerator CreateChicks()
     {
         int idx = 0;
+        chickCount = 0;
         while (!isTimeOver)
         {
-            int chickCount = GameObject.FindGameObjectsWithTag("CHICKEN").Length;
+            //int chickCount = GameObject.FindGameObjectsWithTag("CHICKEN").Length;
             if (chickCount < maxChicks)
             {
                 yield return new WaitForSeconds(createTime);
@@ -97,7 +100,9 @@ public class GameManager : MonoBehaviour
                 int randomIdx = UnityEngine.Random.Range(0, chicks.Length);
                 if (points[idx] == null) break;
                 GameObject.Instantiate(chicks[randomIdx], points[idx].position, points[idx].rotation);
+                Instantiate(chickSpawnEffect, points[idx].position + Vector3.up * 0.05f, points[idx].rotation);
                 idx++;
+                chickCount++;
 
                 //GameObject.Instantiate(chicks[randomIdx], points[2].position, points[pointIdx].rotation);
 

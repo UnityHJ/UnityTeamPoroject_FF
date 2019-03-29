@@ -709,7 +709,8 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    UNet: 1
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -729,10 +730,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 704a44d5-57f4-4498-a9fb-f9862b30017c
+  cloudProjectId: 8069456c-0253-4037-b78a-859102ebeebe
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: heyjoonhey
+  projectName: Food Fighter
+  organizationId: kr_merry
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

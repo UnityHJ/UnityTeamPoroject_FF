@@ -8,6 +8,7 @@ public class ReticleCast : MonoBehaviour
     private const string TAG = "ReticleCast";
     private const string chickTag = "CHICKEN";
     private const string colaTag = "COLA";
+    private const string trash = "TRASH";
 
     private RaycastHit hit;
     private Image circle;
@@ -47,6 +48,7 @@ public class ReticleCast : MonoBehaviour
                 && (prevItemID == 0 || hit.collider.GetInstanceID() == prevItemID)
                 )
             {
+                if (hit.collider.tag == trash) return;
                 circle.fillAmount += Time.deltaTime * gazeValue;
                 prevItemID = hit.collider.GetInstanceID();
                 if (circle.fillAmount == 1.0f)

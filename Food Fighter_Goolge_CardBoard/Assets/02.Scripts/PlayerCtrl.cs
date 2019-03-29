@@ -64,6 +64,7 @@ public class PlayerCtrl : MonoBehaviour
         }
         else
         {
+            isShaking = false;
             timeSum = 0;
             angleSum = 0.0f;
         }

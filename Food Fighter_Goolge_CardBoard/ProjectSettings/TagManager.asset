@@ -7,6 +7,8 @@ TagManager:
   - CHICKEN
   - COKE
   - Chicken
+  - Bread
+  - TRASH
   layers:
   - Default
   - TransparentFX

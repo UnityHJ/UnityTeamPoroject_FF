@@ -121,24 +121,26 @@ public class FoodsCtrl : MonoBehaviour
                 yield return null;
             }
             audioTime = SoundCtrl.Instance.MakeSounds(SoundEffects.CHEW);
+            yield return new WaitForSeconds(audioTime + GameManager.Instance.mukGauge.fillAmount * 2);
             if (i == 2)
             {
                 GameManager.Instance.itemState = ItemState.NORMAL;
                 //Destroy(gameObject);
                 ThrowBone();
             }
-            yield return new WaitForSeconds(audioTime + GameManager.Instance.mukGauge.fillAmount * 2);
             audioTime = SoundCtrl.Instance.MakeSounds(SoundEffects.SWALLOW);
             GameManager.Instance.EatSome(eatVal);
             GameManager.Instance.UpdateCal(eatCal);
-            
-            yield return new WaitForSeconds(audioTime + GameManager.Instance.mukGauge.fillAmount * 2);
+            //yield return new WaitForSeconds(audioTime + GameManager.Instance.mukGauge.fillAmount * 2);
+            yield return new WaitForSeconds(audioTime);
         }
 
     }
 
     private void ThrowBone()
     {
+        gameObject.tag = "TRASH";
+        GameManager.Instance.chickCount--;
         rb.isKinematic = false;
         float randomForce = Random.Range(throwForce * 0.8f, throwForce * 1.2f);
         rb.AddForce(new Vector3(1.0f, 2.0f, 1.0f).normalized * randomForce, ForceMode.Force);

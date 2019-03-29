@@ -597,7 +597,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232997557}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.04, y: -0.10099997, z: 0.16}
+  m_LocalPosition: {x: 0.04, y: -0.11, z: 0.1474}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 554474853}
@@ -964,7 +964,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324607707}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0298, y: 0.0382, z: -0.0337}
+  m_LocalPosition: {x: -0.0298, y: 0.0109, z: -0.0337}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 554474853}
@@ -980,8 +980,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.65
+  m_Color: {r: 1, g: 0.9614183, b: 0.7971698, a: 1}
+  m_Intensity: 2.45
   m_Range: 1.7
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -1561,7 +1561,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 554337466}
   m_LocalRotation: {x: -0.503387, y: -0.5999144, z: -0.47636944, w: 0.39972046}
-  m_LocalPosition: {x: 0.04, y: -0.111, z: 0.224}
+  m_LocalPosition: {x: 0.04, y: -0.137, z: 0.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 554474853}
@@ -3226,12 +3226,15 @@ MonoBehaviour:
   chicks:
   - {fileID: 5053937054086847869, guid: 0cfd530f1cab405468be9e30bc15bf4e, type: 3}
   - {fileID: 3742040827605631354, guid: 3471f5a0071edf24bb225b7d23b2278b, type: 3}
+  chickSpawnEffect: {fileID: 270457278931345254, guid: 3b26ce92056942a48954e5bb0cc0787d,
+    type: 3}
   mukGauge: {fileID: 1682899855}
   reducingTime: 1
   reducingValue: 0.002
   createTime: 1
   gaugeTime: 0.5
   maxChicks: 8
+  chickCount: 0
   isTimeOver: 0
   isFull: 0
   handChicken: {fileID: 0}
