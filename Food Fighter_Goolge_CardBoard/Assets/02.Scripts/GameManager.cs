@@ -94,14 +94,14 @@ public class GameManager : MonoBehaviour
             {
                 yield return new WaitForSeconds(createTime);
                 if (isTimeOver) break;
-                idx = idx % points.Length;
+                //idx = idx % points.Length;
 
-                //int idx = Random.Range(2, points.Length);
+                idx = UnityEngine.Random.Range(2, points.Length);
                 int randomIdx = UnityEngine.Random.Range(0, chicks.Length);
                 if (points[idx] == null) break;
-                GameObject.Instantiate(chicks[randomIdx], points[idx].position, points[idx].rotation);
+                GameObject.Instantiate(chicks[randomIdx], points[idx].position,UnityEngine.Random.rotation);
                 Instantiate(chickSpawnEffect, points[idx].position + Vector3.up * 0.05f, points[idx].rotation);
-                idx++;
+                //idx++;
                 chickCount++;
 
                 //GameObject.Instantiate(chicks[randomIdx], points[2].position, points[pointIdx].rotation);
