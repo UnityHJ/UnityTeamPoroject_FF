@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//음식 전반을 다룬다.
 public class FoodsCtrl : MonoBehaviour
 {
     private const string TAG = "FoodsCtrl";
@@ -10,18 +11,20 @@ public class FoodsCtrl : MonoBehaviour
     private Transform eatingTr;
     private Vector3 originPos;
     private Rigidbody rb;
+    
+    //치킨 먹을때 mesh 데이터 교체 용
     private MeshFilter _meshFilter;
     private MeshRenderer _renderer;
     private MeshCollider _meshColl;
 
-    public float throwForce = 100.0f;
-    public float spinForce = 10.0f;
+    public float throwForce = 100.0f; //뼈다귀 던지는 힘
+    public float spinForce = 10.0f; //뼈다귀 던질때 스핀
     public float speed = 5.0f;
-    public float eatVal = 10.0f;
-    public int eatCal = 79;
-    public int drinkCal = 14;
-    public Mesh[] meshs;
-    public Material[] textures;
+    public float eatVal = 10.0f; //한입에 게이지 올라가는 수치
+    public int eatCal = 79; //한입당 칼로리
+    public int drinkCal = 14; //콜라 한모금 칼로리
+    public Mesh[] meshs; //교체할 Mesh 데이터
+    public Material[] textures; //교체할 Material 데이터
 
     void Start()
     {
@@ -34,6 +37,7 @@ public class FoodsCtrl : MonoBehaviour
         _meshColl = GetComponent<MeshCollider>();
     }
 
+    //클릭 이벤트 리시버
     public void OnClick()
     {
         Debug.Log(TAG + " [OnClick] ");
@@ -41,12 +45,12 @@ public class FoodsCtrl : MonoBehaviour
         StartCoroutine(MoveToPos());
     }
 
-
+    //치킨or 콜라 먹는 포지션까지 이동
     private IEnumerator MoveToPos()
     {
         Debug.Log(TAG + " [MoveToPos] ");
         rb.isKinematic = true;
-        while (GameManager.Instance.itemState == ItemState.MOVING)
+        while (GameManager.Instance.itemState == ItemState.MOVING) 
         {
             Transform tr = chickTr;
             if (tag == "COKE")
@@ -81,6 +85,7 @@ public class FoodsCtrl : MonoBehaviour
     }
 
 
+    //치킨 먹는 메소드
     private IEnumerator EatChicken()
     {
         Debug.Log(TAG + " [EatChicken]");
@@ -91,7 +96,7 @@ public class FoodsCtrl : MonoBehaviour
                 Destroy(gameObject);
                 break;
             }
-            while (true)
+            while (true) //치킨 포인트에서 이팅 포인트로 이동
             {
                 transform.position = Vector3.Slerp(transform.position, eatingTr.position, Time.deltaTime * speed * 1.5f);
                 float dis = Vector3.Distance(transform.position, eatingTr.position);
@@ -109,7 +114,7 @@ public class FoodsCtrl : MonoBehaviour
             _meshFilter.sharedMesh = meshs[i];
             _meshColl.sharedMesh = meshs[i];
             transform.rotation = chickTr.rotation;
-            while (true)
+            while (true) //이팅포인트에서 치킨 포인트로 이동
             {
                 transform.position = Vector3.Slerp(transform.position, chickTr.position, Time.deltaTime * speed * 2.5f);
                 float dis = Vector3.Distance(transform.position, chickTr.position);
@@ -137,6 +142,7 @@ public class FoodsCtrl : MonoBehaviour
 
     }
 
+    //뼈다귀 던지기
     private void ThrowBone()
     {
         gameObject.tag = "TRASH";
@@ -147,6 +153,7 @@ public class FoodsCtrl : MonoBehaviour
         rb.AddTorque(Random.insideUnitSphere.normalized * spinForce, ForceMode.Force);
     }
 
+    //콜라 마시기
     private IEnumerator Drink()
     {
         Debug.Log(TAG + " [Drink]");
@@ -161,7 +168,8 @@ public class FoodsCtrl : MonoBehaviour
             GameManager.Instance.UpdateCal(drinkCal);
         }
         Debug.Log(TAG + " [Drink] reducingTime : " + GameManager.Instance.reducingTime);
-        if (GameManager.Instance.reducingTime != 1.0f)
+        //콜라 연속으로 마시는 경우에는 트림이 난다.
+        if (!Mathf.Approximately(GameManager.Instance.reducingTime, 1.0f)) 
         {
             float audioTime = SoundCtrl.Instance.MakeSounds(SoundEffects.BURP);
             yield return new WaitForSeconds(audioTime + 0.5f);

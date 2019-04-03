@@ -23,8 +23,8 @@ public class PlayerCtrl : MonoBehaviour
     public Canvas shakeUI;
     public Image mukGage;
     public float shakeSpeed = 0.1f;
-    public float shakingAngle = 100.0f;
-    public float shakeCheckTime = 0.5f;
+    public float shakingAngle = 100.0f; //쉐이크 체크 각도
+    public float shakeCheckTime = 0.5f; //쉐이크 체킹 시간 
 
 
     private bool isShaking;
@@ -46,12 +46,12 @@ public class PlayerCtrl : MonoBehaviour
     {
         if (GameManager.Instance.itemState == ItemState.NORMAL)
         {
-            timeSum += Time.deltaTime;
-            angleSum += Vector3.Angle(camerTr.forward, prevAngle);
+            timeSum += Time.deltaTime;//프레임마다 시간을 합산 
+            angleSum += Vector3.Angle(camerTr.forward, prevAngle); //프레임마다 이동 angle값을 합산 
             prevAngle = camerTr.forward;
-            if (timeSum >= shakeCheckTime)
+            if (timeSum >= shakeCheckTime) //쉐이크 체크시간이 지나면 
             {
-                isShaking = angleSum >= shakingAngle;
+                isShaking = angleSum >= shakingAngle; //지정 각도보다 angleSum 이 크면 쉐이킹 중으로 판단.
                 timeSum = 0;
                 angleSum = 0.0f;
                 Debug.Log("isShaking " + isShaking);
@@ -71,6 +71,7 @@ public class PlayerCtrl : MonoBehaviour
         shakeUI.gameObject.SetActive(isShaking);
     }
 
+    //쉐이킹 중 게이지 감소속도 부스트 
     private IEnumerator ShakeBoost()
     {
         GameManager.Instance.reducingTime *= 0.1f;

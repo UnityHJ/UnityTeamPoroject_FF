@@ -39,8 +39,8 @@ public class ReticleCast : MonoBehaviour
         if(Physics.Raycast(camTr.position, camTr.forward, out hit, 100.0f))
         {
             //Vector3 dir = camTr.transform.position - hit.point;
-            _canvas.transform.position = hit.point;
-            _canvas.transform.localScale = Vector3.one * hit.distance * scaleParam;
+            _canvas.transform.position = hit.point; //레티클 포지션 설정
+            _canvas.transform.localScale = Vector3.one * hit.distance * scaleParam; //레이클 사이즈 변경
             //Debug.Log(_canvas.transform.position.ToString());
             if(GameManager.Instance.itemState == ItemState.NORMAL
                 && !GameManager.Instance.isTimeOver
@@ -92,6 +92,7 @@ public class ReticleCast : MonoBehaviour
 
     }
 
+    // 먹게이지 풀 상태인 경우 음식물 선택이 안되고 트림소리만 난다.
     private IEnumerator FullWait()
     {
         GameManager.Instance.itemState = ItemState.WAIT;

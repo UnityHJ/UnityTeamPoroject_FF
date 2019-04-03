@@ -16,7 +16,7 @@ public class IntroReticleCtrl : MonoBehaviour
 
     public float scaleParam = 0.02f;
     public float gazeTime = 1.0f;
-    // Start is called before the first frame update
+
     void Start()
     {
         camTr = Camera.main.transform;
@@ -26,7 +26,6 @@ public class IntroReticleCtrl : MonoBehaviour
         gazeValue = 1 / gazeTime;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (clicked) return;
