@@ -1,0 +1,4 @@
+#Sun Apr 07 03:03:14 KST 2019
+base.0=C\:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\transforms\\dexMerger\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex

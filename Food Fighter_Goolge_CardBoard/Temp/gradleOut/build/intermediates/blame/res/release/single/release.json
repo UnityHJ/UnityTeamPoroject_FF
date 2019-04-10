@@ -1,0 +1,162 @@
+[
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\drawable-nodpi-v4_vr_icon_front.png.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\unitygvr.aar\\9ab0a09cfc975cebfa4d6a9ae0058e14\\res\\drawable-nodpi-v4\\vr_icon_front.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_quantum_ic_close_white_24.png.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\drawable-mdpi-v4\\quantum_ic_close_white_24.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\layout_ui_layer_with_portrait_support.xml.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\layout\\ui_layer_with_portrait_support.xml"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_quantum_ic_close_white_24.png.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\drawable-hdpi-v4\\quantum_ic_close_white_24.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_quantum_ic_close_white_24.png.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\drawable-xhdpi-v4\\quantum_ic_close_white_24.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\layout-land_settings_button.xml.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\layout-land\\settings_button.xml"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\layout-land_ui_layer_with_portrait_support.xml.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\layout-land\\ui_layer_with_portrait_support.xml"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\drawable-v21_rippleable.xml.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\drawable-v21\\rippleable.xml"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\layout_transition_view.xml.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\layout\\transition_view.xml"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_quantum_ic_close_white_24.png.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\drawable-xxhdpi-v4\\quantum_ic_close_white_24.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\mipmap-ldpi_app_icon_round.png.flat",
+        "source": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\src\\main\\res\\mipmap-ldpi\\app_icon_round.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_quantum_ic_settings_white_24.png.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\drawable-hdpi-v4\\quantum_ic_settings_white_24.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_app_icon.png.flat",
+        "source": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\src\\main\\res\\mipmap-xxhdpi\\app_icon.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4_quantum_ic_close_white_24.png.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\drawable-xxxhdpi-v4\\quantum_ic_close_white_24.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi_app_icon_round.png.flat",
+        "source": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\src\\main\\res\\mipmap-hdpi\\app_icon_round.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\layout_ui_layer.xml.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\layout\\ui_layer.xml"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_transition.png.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\drawable-mdpi-v4\\transition.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\layout-land_back_button.xml.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\layout-land\\back_button.xml"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi_app_icon.png.flat",
+        "source": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\src\\main\\res\\mipmap-hdpi\\app_icon.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_quantum_ic_settings_white_24.png.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\drawable-mdpi-v4\\quantum_ic_settings_white_24.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\layout_back_button.xml.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\layout\\back_button.xml"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi_app_icon_round.png.flat",
+        "source": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\src\\main\\res\\mipmap-xhdpi\\app_icon_round.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi_app_icon.png.flat",
+        "source": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\src\\main\\res\\mipmap-xhdpi\\app_icon.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\layout-ldrtl-land-v17_settings_button.xml.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\layout-ldrtl-land-v17\\settings_button.xml"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\layout-ldrtl-land-v17_back_button.xml.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\layout-ldrtl-land-v17\\back_button.xml"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_app_icon.png.flat",
+        "source": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\src\\main\\res\\mipmap-mdpi\\app_icon.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_app_icon.png.flat",
+        "source": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\src\\main\\res\\mipmap-xxxhdpi\\app_icon.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_app_icon_round.png.flat",
+        "source": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\src\\main\\res\\mipmap-xxxhdpi\\app_icon_round.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\layout-ldrtl-v17_back_button.xml.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\layout-ldrtl-v17\\back_button.xml"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\drawable_rippleable.xml.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\drawable\\rippleable.xml"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\mipmap-ldpi_app_icon.png.flat",
+        "source": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\src\\main\\res\\mipmap-ldpi\\app_icon.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\layout-ldrtl-v17_settings_button.xml.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\layout-ldrtl-v17\\settings_button.xml"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4_quantum_ic_settings_white_24.png.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\drawable-xxxhdpi-v4\\quantum_ic_settings_white_24.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\drawable-nodpi-v4_vr_icon_back.png.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\unitygvr.aar\\9ab0a09cfc975cebfa4d6a9ae0058e14\\res\\drawable-nodpi-v4\\vr_icon_back.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\layout_settings_button.xml.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\layout\\settings_button.xml"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_quantum_ic_settings_white_24.png.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\drawable-xxhdpi-v4\\quantum_ic_settings_white_24.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_app_icon_round.png.flat",
+        "source": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\src\\main\\res\\mipmap-xxhdpi\\app_icon_round.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_app_icon_round.png.flat",
+        "source": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\src\\main\\res\\mipmap-mdpi\\app_icon_round.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_transition.png.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\drawable-hdpi-v4\\transition.png"
+    },
+    {
+        "merged": "C:\\JeongSooyong\\UnityTeamPoroject_FF-master\\Food Fighter_Goolge_CardBoard\\Temp\\gradleOut\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_quantum_ic_settings_white_24.png.flat",
+        "source": "C:\\Users\\YGL-EDU\\.gradle\\caches\\transforms-1\\files-1.1\\gvr.aar\\34425ba4cfdb14153b9853d0f2ad8632\\res\\drawable-xhdpi-v4\\quantum_ic_settings_white_24.png"
+    }
+]

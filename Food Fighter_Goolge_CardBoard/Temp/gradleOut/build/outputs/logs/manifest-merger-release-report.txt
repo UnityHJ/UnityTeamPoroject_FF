@@ -1,0 +1,204 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:2:1-24:12
+MERGED from [:gvr-keyboard:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-keyboard.aar\e8ed464a6c93b148cf25efe008b749f5\AndroidManifest.xml:2:1-11:12
+MERGED from [:gvr-keyboardsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\4dbc17ab7b040e767b5dbdb200034e6d\AndroidManifest.xml:2:1-31:12
+MERGED from [:gvr-permissionsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\b5d2996223a5c97ce565be663b51f2a2\AndroidManifest.xml:2:1-30:12
+MERGED from [:gvr:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr.aar\34425ba4cfdb14153b9853d0f2ad8632\AndroidManifest.xml:2:1-9:12
+MERGED from [:unitygvr:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\unitygvr.aar\9ab0a09cfc975cebfa4d6a9ae0058e14\AndroidManifest.xml:2:1-11:12
+INJECTED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:2:1-24:12
+	package
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:2:70-108
+		INJECTED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml
+		INJECTED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:2:1-24:12
+		INJECTED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:2:109-155
+	android:versionCode
+		INJECTED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:2:1-24:12
+		INJECTED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:2:11-69
+	android:installLocation
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:2:156-196
+supports-screens
+ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:3:3-163
+	android:largeScreens
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:3:78-105
+	android:smallScreens
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:3:21-48
+	android:normalScreens
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:3:49-77
+	android:xlargeScreens
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:3:106-134
+	android:anyDensity
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:3:135-160
+application
+ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:4:3-17:17
+MERGED from [:gvr-keyboardsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\4dbc17ab7b040e767b5dbdb200034e6d\AndroidManifest.xml:11:5-29:19
+MERGED from [:gvr-keyboardsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\4dbc17ab7b040e767b5dbdb200034e6d\AndroidManifest.xml:11:5-29:19
+MERGED from [:gvr-permissionsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\b5d2996223a5c97ce565be663b51f2a2\AndroidManifest.xml:11:5-28:19
+MERGED from [:gvr-permissionsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\b5d2996223a5c97ce565be663b51f2a2\AndroidManifest.xml:11:5-28:19
+	android:supportsRtl
+		ADDED from [:gvr-keyboardsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\4dbc17ab7b040e767b5dbdb200034e6d\AndroidManifest.xml:14:9-35
+	android:label
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:4:48-80
+	android:allowBackup
+		ADDED from [:gvr-keyboardsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\4dbc17ab7b040e767b5dbdb200034e6d\AndroidManifest.xml:12:9-35
+	android:icon
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:4:16-47
+	android:theme
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:4:81-119
+activity#com.unity3d.player.UnityPlayerActivity
+ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:5:5-12:16
+	android:screenOrientation
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:5:102-139
+	android:label
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:5:69-101
+	android:launchMode
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:5:140-171
+	android:hardwareAccelerated
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:5:354-389
+	android:configChanges
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:5:172-353
+	android:name
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:5:15-68
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER+category:name:com.google.intent.category.CARDBOARD
+ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:6:7-10:23
+action#android.intent.action.MAIN
+ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:7:9-61
+	android:name
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:7:17-58
+category#android.intent.category.LAUNCHER
+ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:8:9-69
+	android:name
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:8:19-66
+category#com.google.intent.category.CARDBOARD
+ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:9:9-73
+	android:name
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:9:19-70
+meta-data#unityplayer.UnityActivity
+ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:11:7-82
+	android:value
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:11:59-79
+	android:name
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:11:18-58
+meta-data#unityplayer.SkipPermissionsDialog
+ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:13:5-88
+	android:value
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:13:65-85
+	android:name
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:13:16-64
+meta-data#unity.build-id
+ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:14:5-101
+	android:value
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:14:46-98
+	android:name
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:14:16-45
+meta-data#unity.splash-mode
+ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:15:5-69
+	android:value
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:15:49-66
+	android:name
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:15:16-48
+meta-data#unity.splash-enable
+ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:16:5-75
+	android:value
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:16:51-72
+	android:name
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:16:16-50
+uses-feature#0x00020000
+ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:18:3-52
+	android:glEsVersion
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:18:17-49
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:19:3-78
+	android:name
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:19:20-75
+uses-permission#android.permission.INTERNET
+ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:20:3-65
+	android:name
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:20:20-62
+uses-feature#android.hardware.touchscreen
+ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:21:3-88
+	android:required
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:21:61-85
+	android:name
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:21:17-60
+uses-feature#android.hardware.touchscreen.multitouch
+ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:22:3-99
+	android:required
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:22:72-96
+	android:name
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:22:17-71
+uses-feature#android.hardware.touchscreen.multitouch.distinct
+ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:23:3-108
+	android:required
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:23:81-105
+	android:name
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml:23:17-80
+uses-sdk
+INJECTED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml
+INJECTED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml
+MERGED from [:gvr-keyboard:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-keyboard.aar\e8ed464a6c93b148cf25efe008b749f5\AndroidManifest.xml:7:5-9:41
+MERGED from [:gvr-keyboard:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-keyboard.aar\e8ed464a6c93b148cf25efe008b749f5\AndroidManifest.xml:7:5-9:41
+MERGED from [:gvr-keyboardsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\4dbc17ab7b040e767b5dbdb200034e6d\AndroidManifest.xml:7:5-9:41
+MERGED from [:gvr-keyboardsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\4dbc17ab7b040e767b5dbdb200034e6d\AndroidManifest.xml:7:5-9:41
+MERGED from [:gvr-permissionsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\b5d2996223a5c97ce565be663b51f2a2\AndroidManifest.xml:7:5-9:41
+MERGED from [:gvr-permissionsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\b5d2996223a5c97ce565be663b51f2a2\AndroidManifest.xml:7:5-9:41
+MERGED from [:gvr:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr.aar\34425ba4cfdb14153b9853d0f2ad8632\AndroidManifest.xml:5:5-7:41
+MERGED from [:gvr:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr.aar\34425ba4cfdb14153b9853d0f2ad8632\AndroidManifest.xml:5:5-7:41
+MERGED from [:unitygvr:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\unitygvr.aar\9ab0a09cfc975cebfa4d6a9ae0058e14\AndroidManifest.xml:7:5-9:41
+MERGED from [:unitygvr:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\unitygvr.aar\9ab0a09cfc975cebfa4d6a9ae0058e14\AndroidManifest.xml:7:5-9:41
+INJECTED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml
+INJECTED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml
+		INJECTED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml
+		ADDED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml
+		INJECTED from C:\JeongSooyong\UnityTeamPoroject_FF-master\Food Fighter_Goolge_CardBoard\Temp\gradleOut\src\main\AndroidManifest.xml
+activity#com.google.gvr.keyboardsupport.TransitionVRActivity
+ADDED from [:gvr-keyboardsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\4dbc17ab7b040e767b5dbdb200034e6d\AndroidManifest.xml:17:9-28:20
+	android:label
+		ADDED from [:gvr-keyboardsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\4dbc17ab7b040e767b5dbdb200034e6d\AndroidManifest.xml:22:13-45
+	android:enableVrMode
+		ADDED from [:gvr-keyboardsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\4dbc17ab7b040e767b5dbdb200034e6d\AndroidManifest.xml:20:13-106
+	android:exported
+		ADDED from [:gvr-keyboardsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\4dbc17ab7b040e767b5dbdb200034e6d\AndroidManifest.xml:21:13-37
+	android:resizeableActivity
+		ADDED from [:gvr-keyboardsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\4dbc17ab7b040e767b5dbdb200034e6d\AndroidManifest.xml:23:13-47
+	android:configChanges
+		ADDED from [:gvr-keyboardsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\4dbc17ab7b040e767b5dbdb200034e6d\AndroidManifest.xml:19:13-100
+	android:name
+		ADDED from [:gvr-keyboardsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\4dbc17ab7b040e767b5dbdb200034e6d\AndroidManifest.xml:18:13-79
+intent-filter#category:name:android.intent.category.LAUNCHER+category:name:com.google.intent.category.DAYDREAM
+ADDED from [:gvr-keyboardsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\4dbc17ab7b040e767b5dbdb200034e6d\AndroidManifest.xml:24:13-27:29
+category#com.google.intent.category.DAYDREAM
+ADDED from [:gvr-keyboardsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\4dbc17ab7b040e767b5dbdb200034e6d\AndroidManifest.xml:26:17-80
+	android:name
+		ADDED from [:gvr-keyboardsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-keyboardsupport-release.aar\4dbc17ab7b040e767b5dbdb200034e6d\AndroidManifest.xml:26:27-77
+activity#com.google.gvr.permissionsupport.TransitionVRActivity
+ADDED from [:gvr-permissionsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\b5d2996223a5c97ce565be663b51f2a2\AndroidManifest.xml:17:9-27:20
+	android:label
+		ADDED from [:gvr-permissionsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\b5d2996223a5c97ce565be663b51f2a2\AndroidManifest.xml:22:13-45
+	android:enableVrMode
+		ADDED from [:gvr-permissionsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\b5d2996223a5c97ce565be663b51f2a2\AndroidManifest.xml:20:13-106
+	android:exported
+		ADDED from [:gvr-permissionsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\b5d2996223a5c97ce565be663b51f2a2\AndroidManifest.xml:21:13-37
+	android:configChanges
+		ADDED from [:gvr-permissionsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\b5d2996223a5c97ce565be663b51f2a2\AndroidManifest.xml:19:13-100
+	android:name
+		ADDED from [:gvr-permissionsupport-release:] C:\Users\YGL-EDU\.gradle\caches\transforms-1\files-1.1\gvr-permissionsupport-release.aar\b5d2996223a5c97ce565be663b51f2a2\AndroidManifest.xml:18:13-81

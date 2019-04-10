@@ -1813,6 +1813,62 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &568944163 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100002, guid: 0573b1a8c04879946b69b374ca262a38,
+    type: 3}
+  m_PrefabInstance: {fileID: 966778154}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &568944164
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568944163}
+  serializedVersion: 2
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &568944167
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568944163}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 0573b1a8c04879946b69b374ca262a38, type: 3}
+--- !u!114 &568944168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568944163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 214e27b513211a246b11b20edbdb2fde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwForce: 100
+  spinForce: 10
+  speed: 5
+  eatVal: 10
+  eatCal: 79
+  drinkCal: 14
+  meshs: []
+  textures: []
 --- !u!1 &585268423
 GameObject:
   m_ObjectHideFlags: 0
@@ -3536,7 +3592,7 @@ MonoBehaviour:
   reducingValue: 0.002
   createTime: 1
   gaugeTime: 0.5
-  maxChicks: 12
+  maxChicks: 26
   chickCount: 0
   isTimeOver: 0
   isFull: 0
@@ -4210,62 +4266,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1 &1353237086 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: 0573b1a8c04879946b69b374ca262a38,
-    type: 3}
-  m_PrefabInstance: {fileID: 966778154}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1353237088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1353237086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 214e27b513211a246b11b20edbdb2fde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwForce: 100
-  spinForce: 10
-  speed: 5
-  eatVal: 10
-  eatCal: 79
-  drinkCal: 14
-  meshs: []
-  textures: []
---- !u!54 &1353237089
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1353237086}
-  serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!64 &1353237090
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1353237086}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 0573b1a8c04879946b69b374ca262a38, type: 3}
 --- !u!1 &1369138599
 GameObject:
   m_ObjectHideFlags: 0
@@ -5003,12 +5003,12 @@ VideoPlayer:
   m_RenderMode: 2
   m_AspectRatio: 2
   m_DataSource: 0
-  m_PlaybackSpeed: 1
+  m_PlaybackSpeed: 1.5
   m_AudioOutputMode: 2
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
-  - 0.418
+  - 0.05
   m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00

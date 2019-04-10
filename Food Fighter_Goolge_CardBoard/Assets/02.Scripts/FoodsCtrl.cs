@@ -163,6 +163,11 @@ public class FoodsCtrl : MonoBehaviour
             {
                 break;
             }
+            
+            transform.Rotate(-35f, Time.deltaTime, 0f);
+            //transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y * 0.1f, transform.localPosition.z * 0.1f);
+            //transform.localPosition = transform.localPosition + new Vector3(0.0f, 0.05f, transform.localPosition.z * 0.02f);
+            transform.localPosition = transform.localPosition + new Vector3(0.0f, 0.05f, 0.02f);
             float audioTime = SoundCtrl.Instance.MakeSounds(SoundEffects.DRINK);
             yield return new WaitForSeconds(audioTime + 0.5f);
             GameManager.Instance.UpdateCal(drinkCal);
@@ -178,6 +183,7 @@ public class FoodsCtrl : MonoBehaviour
         {
             SoundCtrl.Instance.MakeSounds(SoundEffects.KYAH);
         }
+        transform.Rotate(105f, Time.deltaTime, 0f);
         GameManager.Instance.itemState = ItemState.NORMAL;
         GameManager.Instance.DrinkSome(3.0f);
 
